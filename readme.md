@@ -13,7 +13,7 @@ Oh - and it's got to run in < 2 seconds (presumably this will decrease as proces
 
 Also let's assume the words are in a text file with one word per line - for example https://raw.githubusercontent.com/dwyl/english-words/master/words.txt
 
-###Design
+### Design
 
 try to do fastest thing first, so build a kind of multi-level tree.
 
