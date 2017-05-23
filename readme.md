@@ -18,9 +18,17 @@ Also let's assume the words are in a text file with one word per line - for exam
 try to do fastest thing first, so build a kind of multi-level tree.
 
 1st level = word length
-2nd level = sum of all characters
-3rd level = sort letters alphabetically and compare
+2nd level = quick count of each letter
 
-Hopefully not many will reach the 3rd level (not sure until we try)
+which means 
 
-If they do, the 2nd level could be made a bit more hash-like (shifting etc) to reduce chance of different words hitting the same bucket
+* create 26 buckets initially zero
+* enumerate the chars in the string
+* increment bucket[char]
+* scoop up the non-zero bucket indices and counts
+
+eg
+
+	"books" -> {b, 1}{k, 1}{o, 2}{s, 1}
+
+should be faster than sorting. Maybe just turn into a big number
