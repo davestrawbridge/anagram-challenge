@@ -13,6 +13,11 @@ Oh - and it's got to run in < 2 seconds (presumably this will decrease as proces
 
 Also let's assume the words are in a text file with one word per line - for example https://raw.githubusercontent.com/dwyl/english-words/master/words.txt
 
+### Update
+Actually just used a dictionary keyed by alphabetically sorted word, and kept running reference to the 'winning' set of anagrams.
+
+Takes < 1.3 seconds with 354985 words (i3 CPU).
+
 ### Design
 
 try to do fastest thing first, so build a kind of multi-level tree.
